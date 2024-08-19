@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Header with user info -->
+        <header id="header">
+            <div id="user-info">
+                <img id="user-avatar" src="" alt="Avatar">
+                <span id="user-name"></span>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main id="main">
+            <div id="home" class="page">
+                <h1>Welcome to Account Shop</h1>
+                <p>Select an option below:</p>
+            </div>
+
+            <div id="purchase" class="page hidden">
+                <h2>Purchase</h2>
+                <ul>
+                    <li><button onclick="buy('Telegram')">Buy Telegram Account</button></li>
+                    <li><button onclick="buy('WhatsApp')">Buy WhatsApp Account</button></li>
+                    <li><button onclick="buy('Google')">Buy Google Account</button></li>
+                    <li><button onclick="buy('Twitter')">Buy Twitter Account</button></li>
+                    <li><button onclick="buy('Discord')">Buy Discord Account</button></li>
+                </ul>
+            </div>
+
+            <div id="recharge" class="page hidden">
+                <h2>Recharge</h2>
+                <p>Please contact the admin to recharge:</p>
+                <a href="https://t.me/admin_contact" target="_blank">Contact Admin</a>
+                <p>Your balance: <span id="balance">0</span> credits</p>
+            </div>
+
+            <div id="profile" class="page hidden">
+                <h2>User Center</h2>
+                <p>Username: <span id="profile-username"></span></p>
+                <p>Points: <span id="points">0</span></p>
+            </div>
+        </main>
+
+        <!-- Footer navigation -->
+        <footer id="footer">
+            <nav>
+                <button onclick="showPage('home')">Home</button>
+                <button onclick="showPage('purchase')">Purchase</button>
+                <button onclick="showPage('recharge')">Recharge</button>
+                <button onclick="showPage('profile')">User Center</button>
+            </nav>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
